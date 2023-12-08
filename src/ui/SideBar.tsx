@@ -59,14 +59,15 @@ export default function SideBar() {
         authenticated ? "my-2" : "my-10"
       } `}
     >
-      <div className="flex justify-center flex-col items-start mb-2 w-full">
+      <div className="flex justify-center flex-col items-start gap-1 mb-2 w-full">
         <Link
           to="/"
-          className="text-3xl text-stone-200 flex items-center gap-2 font-serif cursor-pointer"
+          className="text-2xl text-stone-200  px-4 flex items-center gap-2 font-serif cursor-pointer"
         >
           <span>East Side</span> <FaVolleyballBall />
         </Link>
         <Switch
+          className="px-4"
           onChange={() => handleChangeLang()}
           size="sm"
           color="secondary"
@@ -78,7 +79,7 @@ export default function SideBar() {
           to={path.path}
           className={`text-stone-300 hover:text-stone-100 hover:bg-purple-600 ${
             pathname === path.path && "bg-purple-600"
-          } py-2 px-4 rounded-lg duration-150 transition-all text-lg md:text-xl`}
+          } py-2 px-4 rounded-lg duration-150 transition-all text-base md:text-lg`}
         >
           <li className="flex items-center gap-2 ">
             <span>{path.icon}</span>
@@ -92,7 +93,7 @@ export default function SideBar() {
             to="/createNews"
             className={`text-stone-300 hover:text-stone-100 hover:bg-purple-600 ${
               pathname === "/createNews" && "bg-purple-600"
-            } py-2 px-4 rounded-lg duration-150 transition-all text-lg md:text-xl`}
+            } py-2 px-4 rounded-lg duration-150 transition-all text-base md:text-lg`}
           >
             <p className="flex items-center gap-2">
               <HiMiniPhoto />
@@ -103,7 +104,7 @@ export default function SideBar() {
             to="/createMatch"
             className={`text-stone-300 hover:text-stone-100 hover:bg-purple-600 ${
               pathname === "/createMatch" && "bg-purple-600"
-            } py-2 px-4 rounded-lg duration-150 transition-all text-lg md:text-xl`}
+            } py-2 px-4 rounded-lg duration-150 transition-all text-base md:text-lg`}
           >
             <p className="flex items-center gap-2">
               <HiOutlineCloudArrowDown />
@@ -118,7 +119,7 @@ export default function SideBar() {
           to="/signin"
           className={`text-stone-300 hover:text-stone-100 hover:bg-purple-600 ${
             pathname === "/signin" && "bg-purple-600"
-          } py-2 px-4 rounded-lg duration-150 transition-all text-lg md:text-xl`}
+          } py-2 px-4 rounded-lg duration-150 transition-all text-base md:text-lg`}
         >
           <p className="flex items-center gap-2">
             <HiArrowRightOnRectangle />
@@ -129,7 +130,7 @@ export default function SideBar() {
       {authenticated && (
         <button
           onClick={() => logout()}
-          className={`text-stone-300 flex items-center gap-2 hover:text-stone-100 hover:bg-purple-600  py-2 px-4 rounded-lg duration-150 transition-all text-lg md:text-xl`}
+          className={`text-stone-300 flex items-center gap-2 hover:text-stone-100 hover:bg-purple-600  py-2 px-4 rounded-lg duration-150 transition-all text-base md:text-lg`}
         >
           <HiOutlineArrowLeftOnRectangle />
           <span>{isGeoLang ? "გასვლა" : "Log out"}</span>
@@ -137,7 +138,7 @@ export default function SideBar() {
       )}
       <p
         className={`text-stone-200 text-[10px] px-4 ${
-          !authenticated ? "pt-32" : ""
+          !authenticated ? "pt-16" : ""
         }`}
       >
         © 2023 ozbeta. All rights reserved

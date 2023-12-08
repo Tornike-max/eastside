@@ -14,7 +14,9 @@ export default function appLayout() {
       <aside className="sticky hidden sm:flex top-0 h-screen max-w-[300px] w-full bg-black p-4">
         <SideBar />
       </aside>
-      <main className={`col-span-2 p-2 overflow-y-auto py-20 sm:p-8 xl:pr-28`}>
+      <main
+        className={`col-span-2 p-2 overflow-y-auto py-20 m-auto max-w-5xl w-full sm:p-8 xl:pr-28`}
+      >
         <Outlet />
       </main>
       <div className="fixed bottom-0 w-full sm:hidden bg-stone-900 p-4  col-span-3 z-50 ">
