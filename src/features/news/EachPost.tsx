@@ -3,6 +3,7 @@ import { getDate } from "../../ui/getDate";
 import { HiOutlineTrash, HiOutlineUser } from "react-icons/hi2";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useDeleteNews } from "../../hooks/news/useDeleteNews";
+import { useUser } from "../../hooks/users/useUser";
 
 type NewsItem = {
   author: {
@@ -24,6 +25,7 @@ type NewsItem = {
 type NewsArray = NewsItem[] | undefined;
 
 export default function EachPost({ news }: { news: NewsArray }) {
+  const { authenticated } = useUser();
   const navigate = useNavigate();
   const { deleteNews, isDeleting } = useDeleteNews();
 
@@ -55,14 +57,16 @@ export default function EachPost({ news }: { news: NewsArray }) {
                 className="w-full h-auto object-cover transition-transform duration-300 transform hover:scale-105"
               />
               {/* Delete button */}
-              <button
-                type="button"
-                disabled={isDeleting}
-                onClick={(e) => onDeleteClick(e, post.id)}
-                className="absolute top-2 right-2 text-red-500 py-2 px-3 rounded-full bg-stone-200 opacity-70 hover:text-red-600 transition-all duration-300 focus:outline-none text-2xl"
-              >
-                <HiOutlineTrash />
-              </button>
+              {authenticated && (
+                <button
+                  type="button"
+                  disabled={isDeleting}
+                  onClick={(e) => onDeleteClick(e, post.id)}
+                  className="absolute top-2 right-2 text-red-500 py-2 px-3 rounded-full bg-stone-200 opacity-70 hover:text-red-600 transition-all duration-300 focus:outline-none text-2xl"
+                >
+                  <HiOutlineTrash />
+                </button>
+              )}
             </>
           )}
           <div className="p-4">
