@@ -25,7 +25,7 @@ type RatioType =
 export default function LineDash({ winRatio }: { winRatio: RatioType }) {
   const { isGeoLang } = useChangeLanguage();
   return (
-    <div className="m-auto">
+    <div>
       <ResponsiveContainer
         className={"max-w-5xl w-full flex justify-center items-center"}
         height={250}

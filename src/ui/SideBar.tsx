@@ -56,10 +56,10 @@ export default function SideBar() {
   return (
     <ul
       className={`flex flex-col justify-start items-start gap-3 ${
-        authenticated ? "my-4" : "my-10"
+        authenticated ? "my-2" : "my-10"
       } `}
     >
-      <div className="flex justify-center items-center gap-5 mb-4 w-full">
+      <div className="flex justify-center flex-col items-start mb-2 w-full">
         <Link
           to="/"
           className="text-3xl text-stone-200 flex items-center gap-2 font-serif cursor-pointer"

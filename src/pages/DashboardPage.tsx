@@ -28,7 +28,7 @@ export default function DashboardPage() {
     };
   });
   return (
-    <div>
+    <div className=" max-w-5xl w-full">
       <h1 className="text-center text-lg md:text-2xl lg:text-3xl py-4 text-stone-200 font-bold">
         {isGeoLang ? "გუნდის სტატისტიკა" : "Team Stat"}
       </h1>
