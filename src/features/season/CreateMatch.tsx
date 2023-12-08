@@ -30,7 +30,7 @@ type MatchDataType = {
 export default function CreateMatch({
   matchData,
 }: {
-  matchData: MatchDataType;
+  matchData?: MatchDataType;
 }) {
   const { isGeoLang } = useChangeLanguage();
   const navigate = useNavigate();

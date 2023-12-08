@@ -9,32 +9,31 @@ import {
 import { useUser } from "../../hooks/users/useUser";
 import { useChangeLanguage } from "../../context/useChangeLanguage";
 import { useState } from "react";
-import { supabaseUrl } from "../../services/supabase";
 
-type PlayersType = {
-  player_id: number;
-  full_name: string;
-  position: string;
-  jersey_number: number;
-  nationality: string;
-  height: number;
-  weight: number;
-  image: string;
-  captain: boolean;
-  points_scored: number;
-};
+// type PlayersType = {
+//   player_id: number;
+//   full_name: string;
+//   position: string;
+//   jersey_number: number;
+//   nationality: string;
+//   height: number;
+//   weight: number;
+//   image: string;
+//   captain: boolean;
+//   points_scored: number;
+// };
 
-type PlayerType = {
-  aces: number;
-  digs: number;
-  spikes: number;
-  blocks: number;
-  matches_played: number;
-  player_id: number;
-  sets: number;
-  stat_id: number;
-  players: PlayersType;
-};
+// type PlayerType = {
+//   aces: number;
+//   digs: number;
+//   spikes: number;
+//   blocks: number;
+//   matches_played: number;
+//   player_id: number;
+//   sets: number;
+//   stat_id: number;
+//   players: PlayersType;
+// };
 
 export default function PlayerDetails() {
   const { playerId } = useParams();

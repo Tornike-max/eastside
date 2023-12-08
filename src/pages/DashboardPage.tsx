@@ -2,7 +2,7 @@ import { useChangeLanguage } from "../context/useChangeLanguage";
 import LineDash from "../features/dashboard/LineDash";
 import { useSeasonGames } from "../hooks/season/useSeasonGames";
 import Loader from "../ui/Loader";
-import { formattedDate, getFormattedDateSm } from "../ui/formattedDate";
+import { getFormattedDateSm } from "../ui/formattedDate";
 
 export default function DashboardPage() {
   const { data, isPending } = useSeasonGames();

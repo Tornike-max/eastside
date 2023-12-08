@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DashboardPage from "./pages/DashboardPage";
 import AppLayout from "./ui/appLayout";
 import NewsPage from "./pages/NewsPage";
@@ -14,7 +14,6 @@ import EditNews from "./features/news/EditNews";
 import CreateMatchTable from "./pages/CreateMatchTable";
 import EditMatchTable from "./pages/EditMatchTable";
 import PlayerDetails from "./features/players/PlayerDetails";
-import EditPlayer from "./features/players/CreateOrEditPlayer";
 import EditPlayerPage from "./pages/EditPlayerPage";
 import CreatePlayerPage from "./pages/CreatePlayerPage";
 import AuthLayout from "./ui/AuthLayout";
