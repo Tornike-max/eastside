@@ -10,7 +10,6 @@ export default function Header() {
   const navigate = useNavigate();
   const { logout, isLogingOut } = useLogout();
   const { authenticated } = useUser();
-  console.log(isGeoLang);
 
   function handleLogout(e: React.MouseEvent) {
     e.preventDefault();

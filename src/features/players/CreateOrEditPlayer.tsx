@@ -24,8 +24,6 @@ export default function CreateOrEditPlayer({
     },
   });
 
-  console.log(player);
-
   const { createEdit, isWorkingPlayer } = useEditOrCreatePlayer();
   const onSubmit: SubmitHandler<PlayersType> = (data) => {
     if (!data) return;
@@ -49,20 +47,7 @@ export default function CreateOrEditPlayer({
       image: image,
     };
 
-    // const playerStats = {
-    //   matches_played: 0,
-    //   aces: 0,
-    //   spikes: 0,
-    //   digs: 0,
-    //   blocks: 0,
-    //   sets: 0,
-    //   player_id: 0,
-    //   points_scored: 0,
-    // };
-
     createEdit({ newObj, player_id: player?.player_id });
-
-    console.log(image);
   };
 
   return (

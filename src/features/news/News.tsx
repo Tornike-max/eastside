@@ -43,7 +43,7 @@ export default function News() {
         <EachPost news={news} />
       </div>
       <div className="flex justify-between items-center w-full text-stone-200">
-        <span>
+        <span className="text-xs sm:text-sm md:text-base">
           {count && count <= MAX_PAGE_NEWS
             ? `Only ${count} posts at this moment`
             : `${count} Posts`}

@@ -50,7 +50,6 @@ export default function PlayerDetails() {
   const images = [player.image, player.image2, player.image3];
 
   const filteredImages = images.filter((img) => img !== null);
-  console.log(filteredImages);
   const maxImages = filteredImages.length;
   const nextImage = () => {
     if (filteredImages.length <= 1) return;
@@ -63,7 +62,6 @@ export default function PlayerDetails() {
     const newIndex = (currentImageIndex - 1 + maxImages) % maxImages;
     setCurrentImageIndex(newIndex);
   };
-  console.log(images);
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-6">

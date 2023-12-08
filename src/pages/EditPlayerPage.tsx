@@ -10,7 +10,6 @@ export default function EditPlayerPage() {
   if (isPlayerLoading) return <Loader />;
   if (!player) return;
 
-  console.log(player);
   return (
     <>
       <CreateOrEditPlayer player={player} />
