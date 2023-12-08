@@ -3,9 +3,11 @@ import { useGetHistory } from "../../hooks/history/useGetHistory";
 import Loader from "../../ui/Loader";
 import { useNavigate } from "react-router-dom";
 import { useChangeLanguage } from "../../context/useChangeLanguage";
+import { useUser } from "../../hooks/users/useUser";
 
 export default function History() {
   const { isGeoLang } = useChangeLanguage();
+  const { authenticated } = useUser();
 
   const { data, isPending } = useGetHistory();
   const navigate = useNavigate();
@@ -39,16 +41,18 @@ export default function History() {
             </span>
           </div>
         </div>
-        <div className="w-full flex justify-end items-end">
-          <Button
-            onClick={() => navigate(`/updateHistory/${data.id}`)}
-            type="button"
-            variant="shadow"
-            color="secondary"
-          >
-            {isGeoLang ? "განაახლე ისტორია" : "Update History"}
-          </Button>
-        </div>
+        {authenticated && (
+          <div className="w-full flex justify-end items-end">
+            <Button
+              onClick={() => navigate(`/updateHistory/${data.id}`)}
+              type="button"
+              variant="shadow"
+              color="secondary"
+            >
+              {isGeoLang ? "განაახლე ისტორია" : "Update History"}
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
